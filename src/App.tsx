@@ -1,11 +1,17 @@
 import './App.css';
 
+import { Auth } from 'aws-amplify';
 import { useState } from 'react';
 
+import { awsAuthConfig } from './amplify-auth';
 import reactLogo from './assets/react.svg';
 
 function App() {
   const [count, setCount] = useState(0);
+
+  // Log these values to make sure everything is working as expected
+  console.log("awsAuthConfig :>> ", awsAuthConfig);
+  console.log("Auth :>> ", Auth);
 
   return (
     <div className="App">
